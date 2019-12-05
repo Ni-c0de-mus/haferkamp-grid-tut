@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+SC|Arbutus+Slab|Bree+Serif|Cinzel|Cormorant+Garamond|Crete+Round|DM+Serif+Text|Domine|Nanum+Myeongjo|Neuton|Playfair+Display+SC|Solway|Ultra|Vidaloka|Zilla+Slab&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* Coolors */
+
+    --flirt: #a80874;
+    --italian-sky: #b7fdfe;
+    --malachite: #5ef38c;
+    --slime: #2b9720;
+    --pullman-green: #343a1a;
+    --magenta: #ff01fb;
+    --viv-cerulian: #02a9ea;
+    --lemon-glacier: #faff00;
+
+    --mid-blue: #75dddd;
+    --dark-sky: #84c7d0;
+    --ceil: #9297c4;
+    --majesty: #9368b7;
+    --fandango: #aa3e98;
+    --azureish: #d9f0ff;
+    --winter-wizard: #a3d5ff;
+    --bone: #e1dabd;
+    --laurel-green: #abc798;
+    --classic-rose: #ffc4eb;
+    --desert: #e6beae;
+    --pale-taupe: #b2967d;
+    --wenge: #6b6054;
+    --artichoke: #929487;
+    --silver-chalice: #a1b0ab;
+    --waterspout: #a8f9ff;
+    --photo-blue: #9ae5e6;
+
+    --metalic-sun: #a8763e;
+    --keyan-copper: #6f1a07;
+    --raisin-black: #2b2118;
+    --charcoal: #2f4550;
+    --reg-black: #000000;
+    --mummies-tomb: #739e82;
+    --taupe: #45462a;
+    --jet: #343330;
+    --paynes-grey: #546a7b;
+    --pale-copper: #db7f67;
+    --dark-vanilla: #dbbea1;
+    --khaki: #c3a995;
+    --grullo: #ab947e;
+    --vvd-brown: #66462c;
+    --dark-sienna: #31081f;
+    --rich-black: #0e0004;
+    --pale-yellow: #f3ffb6;
+    --black-shadows: #c0b7b1;
+    --wood-brown: #c69c72;
+    --pale-aqua: #bfd7ea;
+    --pewter-blue: #91aec1;
+    --dust-storm: #e2c2c6;
+    --tuscanny: #b9929f;
+    --white: #ffffff;
+    --dark-gunmetal: #0d1f2d;
+    --gunmetal: #2d3142;
+    --silver: #bfc0c0;
+    --yank-blue: #1c3144;
+    --boston-red: #d00000;
+    --steel-teal: #508991;
+    --iceberg: #74b3ce;
+    --pale-gold: #e5be9e;
+    --tumbleweed: #e1b07e;
+    --warm-black: #0e3b43;
+    --myrtle-green: #357266;
+    --begonia: #f7717d;
+    --melon: #f7b2b7;
+    --pineapple: #5c415d;
+    --max-purple: #b2abf2;
+    --pink-ras: #89043d;
+    --white-smoke: #f7f7f2;
+    --pearl: #e4e6c3;
+
+    /* fonts */
+
+    --bree-serif: "Bree Serif", serif;
+    --solway-serif: "Solway", serif;
+    --crete-round: "Crete Round", serif;
+    --domine-serif: "Domine", serif;
+    --cinzel-serif: "Cinzel", serif;
+    --cormorant-garamond: "Cormorant Garamond", serif;
+    --zilla-slab: "Zilla Slab", serif;
+    --nanum-serif: "Nanum Myeongjo", serif;
+    --vidaloka: "Vidaloka", serif;
+    --neuton: "Neuton", serif;
+    --playfair: "Playfair Display SC", serif;
+    --ultra-serif: "Ultra", serif;
+    --arbutus-slab: "Arbutus Slab", serif;
+    --dm-serif: "DM Serif Text", serif;
+    --alegreya: "Alegreya SC", serif;
+}
+
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.btn {
+    border-radius: 2rem;
+    background-color: var(--magenta);
+    color: var(--silver);
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: 420ms ease;
+}
+
+.btn:hover {
+    background-color: var(--silver);
+    color: var(--flirt);
+}
+
+.btn__main {
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    border: 1px solid var(--reg-black);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--viv-cerulian);
+    display: inline-block;
+    text-align: center;
+    margin-top: 7.5rem;
+    padding: 1rem 1.8rem;
+    font-size: 6vh;
+    letter-spacing: .8vw;
+    text-transform: uppercase;
+    transition: 420ms ease;
+}
+
+.btn__main:hover {
+    background-color: transparent;
+    color: var(--flirt);
+}
+
+section {
+    padding: 5rem 0;
+}
+
+body {
+    background: var(--reg-black);
+    color: var(--silver);
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.containter {
+    width: 100%;
+    max-width: 98rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.menu__icons {
+    color: var(--silver);
+    font-size: 3.5rem;
+    cursor: pointer;
+    transition: 420ms ease;
+}
+
+.menu__icons:hover {
+    color: var(--flirt);
+}
+
+.nav__brand {
+    width: 3.5rem;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.nav__list {
+    width: 25rem;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url('../img/sunbed3.jpg') center no-repeat;
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 650ms ease-in-out, opacity 810ms ease;
+    z-index: 1300;
+}
+
+.nav__list.active {
+    right: 0;
+    opacity: 1;
+}
+
+.close {
+    position: absolute;
+    color: var(--silver-chalice);
+    top: 2rem;
+    left: 2rem;
+}
+
+.nav__item {
+    margin: 1.5rem 0;
+}
+
+.nav__link {
+    font-size: 1.6rem;
+    color: var(--silver);
+    text-transform: uppercase;
+    transition: 420ms ease;
+}
+
+.nav__link:hover {
+    color: var(--flirt);
+}
+
+/* Hero Section */
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url('../img/sunbed.jpg') center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main__message {
+    width: 100%;
+    text-align: center;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    transform: translateY(20%);
+}
+
+.main__message h3 {
+    font-size: 1.6rem;
+}
+
+.main__message h1 {
+    font-size: 7vh;
+    margin: 2rem 0;
+}
+
+.main__message p {
+    text-transform: lowercase;
+}
+
+.cta {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Activities Grid */
+
+
+
+
+@media screen and (min-width: 600px) {
+
+    .nav__list {
+
+        width: initial;
+        height: initial;
+        background: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        opacity: initial;
+        flex-direction: row;
+        transition: initial;
+    }
+
+    .nav__link {
+        margin: 0 2rem;
+    }
+
+    .menu__icons {
+        display: none;
+    }
+}

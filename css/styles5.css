@@ -5,7 +5,7 @@
 *::after {
  margin: 0;
  padding: 0;
- box-sizing: inherit;
+ box-sizing: border-box;
 }
 
 :root {
@@ -100,8 +100,6 @@
  --alegreya: "Alegreya SC", serif;
 }
 
-/* Universal Styles */
-
 html {
  font-size: 10px;
  box-sizing: border-box;
@@ -127,18 +125,20 @@ p {
 
 .btn {
  border-radius: 2rem;
- background-color: var(--ceil);
- color: var(--silver-chalice);
- display: inline-block;
- font-size: 1rem;
+ background-color: var(--classic-rose);
+ color: var(--gunmetal);
  padding: 1rem 2rem;
- letter-spacing: 0.2rem;
- text-align: center;
+ margin-top: 2rem;
+ font-size: 1rem;
+ text-transform: uppercase;
+ display: inline-block;
+ letter-spacing: .1rem;
  transition: 420ms ease;
 }
 
 .btn:hover {
- background-color: var(--iceberg);
+ background-color: var(--max-purple);
+ color: var(--dark-gunmetal);
 }
 
 section {
@@ -146,25 +146,41 @@ section {
 }
 
 body {
- font-family: var(--azureish);
- font-size: 1.6rem;
- background: var(--keyan-copper);
- color: var(--azureish);
+ background: var(--dark-sky);
+ font-family: var(--domine-serif);
 }
 
-/* Grid Wrapper */
+/* Header & Navigation */
 
-#grid__wrapper {
- display: grid;
- grid-template-columns: repeat(1fr);
- grid-template-rows: auto;
- grid-column-gap: 3rem;
+header {
+ width: 100%;
+ height: 7.7rem;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
 }
 
-/* Header */
+.container {
+ width: 100%;
+ max-width: 98rem;
+ padding: 0 1.5rem;
+ margin: 0 auto;
+}
 
-#header {
- grid-column: 1 / -1;
+.nav__brand {
+ width: 3.5rem;
+}
+
+.menu__icons {
+ font-size: 3.5rem;
+ color: var(--paynes-grey);
+ cursor: pointer;
+ transition: 420ms ease;
+}
+
+.menu__icons:hover {
+ color: var(--max-purple);
 }
 
 nav {
@@ -172,35 +188,13 @@ nav {
  display: flex;
  align-items: center;
  justify-content: space-between;
- margin: 1rem;
-}
-
-.nav__brand {
- margin-left: 2rem;
- width: 3.5rem;
-}
-
-.menu__icons {
- font-size: 3.5rem;
- color: var(--ceil);
- cursor: pointer;
- transition: 420ms;
-}
-
-.menu_icons:hover {
- color: var(--iceberg);
-}
-
-.open {
- position: absolute;
- top: 1rem;
- right: 0.1rem;
+ padding: 0 1rem;
 }
 
 .nav__list {
  width: 25rem;
  height: 100vh;
- background: var(--charcoal);
+ background: var(--pale-gold);
  position: fixed;
  top: 0;
  right: -26rem;
@@ -210,10 +204,14 @@ nav {
  align-items: center;
  justify-content: center;
  transition: all 650ms ease-in-out, opacity 810ms ease;
- z-index: 1300;
 }
 
 .nav__list.active {
+ right: 0;
+ opacity: 1;
+}
+
+.nav__list:hover {
  right: 0;
  opacity: 1;
 }
@@ -222,16 +220,6 @@ nav {
  position: absolute;
  top: 2rem;
  left: 2rem;
- cursor: pointer;
- transition: 420ms ease;
-}
-
-.close:hover {
- color: var(--iceberg);
-}
-
-.open {
- margin-right: 4rem;
 }
 
 .nav__item {
@@ -239,58 +227,135 @@ nav {
 }
 
 .nav__link {
- color: var(--azureish);
+ color: var(--classic-rose);
  font-size: 1.6rem;
  text-transform: uppercase;
- letter-spacing: 0.2rem;
+ transition: 420ms ease;
 }
 
 .nav__link:hover {
- color: var(--ceil);
+ color: var(--pale-copper);
 }
 
-/* Notifications */
+#hero {
+ width: 100%;
+ height: 80vh;
+ background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%), url('../img/naboo.jpg') center no-repeat;
+ background-size: cover;
+ position: relative;
+}
 
-#notification {
- display: grid;
- grid-column: 1 / -1;
- background: var(--artichoke);
- text-align: center;
+.main__message {
+ width: 100%;
+ max-width: 50rem;
+ color: var(--azureish);
+ transform: translateY(20%);
+ text-transform: uppercase;
+}
+
+.main__message h3 {
+ font-size: 1.6rem;
+}
+
+.main__message h1 {
  font-size: 3rem;
- color: var(--gunmetal);
+ margin: 2rem 0;
 }
 
-.content {
- height: 10rem;
- padding: 2.5rem;
+.main__message p {
+ text-transform: lowercase;
+}
+
+
+/* Activities Grid */
+
+#activities {
+ padding: 0;
+}
+
+.title__heading {
  text-align: center;
+ text-transform: uppercase;
+ color: var(--dark-gunmetal);
+ margin: 5rem 0;
+}
+
+.title__heading h3 {
+ font-size:1.4rem;
+}
+
+.title__heading h1 {
+ font-size: 2rem;
+ font-family: var(--nanum-serif);
+ margin: .7rem 0 1rem;
+}
+
+.title__heading p {
+ text-transform: lowercase;
+}
+
+.activities__grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(25rem, auto));
+ grid-gap: 2.5rem;
+}
+
+.activities__grid__item {
+ height: 40rem;
+ padding: 5rem;
+}
+
+.activities__grid__item {
+ border-radius: 2rem;
  position: relative;
  display: flex;
+ color: var(--mid-blue);
+ flex-direction: column;
  justify-content: center;
  cursor: pointer;
  z-index: 1;
 }
 
-#hero {
- grid-column: 1 / -1;
- padding: 0;
+.activities__grid__item::before {
+ content: "";
+ position: absolute;
+ border-radius: 2rem;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-image: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: -1;
 }
 
-.hero {
- width: 100%;
- height: 60vh;
- background: linear-gradient(135deg,
-   rgba(11, 5, 0, 0.3) 0%,
-   rgba(11, 5, 0, 0.7) 100%),
-  url("../img/x-wing2.jpg") center no-repeat;
- background-size: cover;
- position: relative;
- z-index: 1;
+.star__gazing {
+ background: url('../img/X-Wing.jpeg') center no-repeat;
 }
+
+.hiking {
+ background: url('../img/naboo.jpg') center no-repeat;
+}
+
+.camping {
+ background: url('../img/X-Wing.jpeg') center no-repeat;
+}
+
+.activities__grid__item i {
+ font-size: 4rem;
+ color: var(--silver);
+}
+
+.activities__grid__item h1 {
+ font-size: 1.8rem;
+ margin: 1rem;
+}
+
+
 
 /* Media Queries */
 
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 600px) {
+
  .nav__list {
   width: initial;
   height: initial;
@@ -307,16 +372,8 @@ nav {
   display: none;
  }
 
- .nav__item {
-  margin: 0 3rem;
+ .nav__link {
+  margin: 0 2rem;
  }
 }
 
-@media screen and (min-width: 600px) {
- #grid__wrapper {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  grid-column-gap: 3rem;
- }
-}
